@@ -1,0 +1,81 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vPhone</title>
+    <link rel="stylesheet" href="styles/home.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <div class="header">
+        <h1>vPhone</h1>
+        <ul class="navbar">
+            <li>PRODUCTS</li>
+            <li>PROMO</li>
+            <li>ABOUT US</li>
+        </ul>
+    </div>
+
+    <section class="hero">
+        <h1 id="hero-title"></h1>
+        <div class="hero-carousel">
+            <p class="unselectable btnCarousel" id="iconBack">❮</p>
+            <img class="unselectable" id="hero-picture" alt="">
+            <p class="unselectable btnCarousel" id="iconNext">❯</p>
+        </div>
+    </section>
+
+</body>
+
+<script>
+    var buttonNext = document.getElementById("iconNext")
+    var buttonPrev = document.getElementById("iconBack")
+
+    var currentCarousel = 0;
+    var carouselData = {
+        data: [
+            {
+                name: "STRAUSS ONE",
+                image: "assets/images/hand_strauss_one.svg"
+            },
+            {
+                name: "STRAUSS 2",
+                image: "assets/images/hand_strauss_2.svg"
+            }
+        ]
+    }
+
+    setAttributeState()
+    buttonNext.addEventListener("click", (event) => {
+        event.preventDefault()
+        carouselNext()
+    })
+    buttonPrev.addEventListener("click", (event) => {
+        event.preventDefault()
+        carouselPrev()
+    })
+
+    function setAttributeState() {
+        var heroTitle = document.getElementById("hero-title")
+        var heroPicture = document.getElementById("hero-picture")
+
+        heroTitle.innerHTML = carouselData.data[currentCarousel].name
+        heroTitle.style.letterSpacing = "30px"
+        heroPicture.src = carouselData.data[currentCarousel].image
+    }
+
+    function carouselNext() {
+        if (currentCarousel == 1) { currentCarousel = 0 } else { currentCarousel++ }
+        setAttributeState()
+    }
+
+    function carouselPrev() {
+        if (currentCarousel == 0) { currentCarousel = 1 } else { currentCarousel-- }
+        setAttributeState()
+    }
+
+</script>
+
+</html>
