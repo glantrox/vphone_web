@@ -11,15 +11,16 @@
     <!-- Navbar -->
     <div class="header">
         <h1>vPhone</h1>
-        <ul class="navbar">
+        <ul class="navbar unselectable">
             <li>PRODUCTS</li>
             <li>PROMO</li>
             <li>ABOUT US</li>
         </ul>
     </div>
-
+    <!-- Hero Section -->
     <section class="hero">
         <h1 id="hero-title"></h1>
+        <!-- Image Carousel -->
         <div class="hero-carousel">
             <p class="unselectable btnCarousel" id="iconBack">❮</p>
             <img class="unselectable" id="hero-picture" alt="">
@@ -27,55 +28,26 @@
         </div>
     </section>
 
+    <!-- Introduction Section -->
+    <section class="intro">
+        <div class="header-intro">
+            <h1 class="text-intro-title">Kenali lebih dalam <br>
+                tentang strauss.</h1>
+            <p class="text-intro-details"><span>STRAUSS</span> diciptakan bagi mereka yang bergerak cepat dan hidup
+                dengan berani,
+                memadukan kecepatan, gaya,
+                dan kekuatan sehari-hari menjadi satu pengalaman yang mulus. Dari visual yang memukau hingga performa
+                sepanjang hari, <span>STRAUSS</span> diciptakan untuk meningkatkan cara Anda terhubung, berkreasi, dan
+                menjalani
+                hidup.</p>
+        </div>
+        <div class="footer-intro">
+
+        </div>
+    </section>
+
 </body>
 
-<script>
-    var buttonNext = document.getElementById("iconNext")
-    var buttonPrev = document.getElementById("iconBack")
-
-    var currentCarousel = 0;
-    var carouselData = {
-        data: [
-            {
-                name: "STRAUSS ONE",
-                image: "assets/images/hand_strauss_one.svg"
-            },
-            {
-                name: "STRAUSS 2",
-                image: "assets/images/hand_strauss_2.svg"
-            }
-        ]
-    }
-
-    setAttributeState()
-    buttonNext.addEventListener("click", (event) => {
-        event.preventDefault()
-        carouselNext()
-    })
-    buttonPrev.addEventListener("click", (event) => {
-        event.preventDefault()
-        carouselPrev()
-    })
-
-    function setAttributeState() {
-        var heroTitle = document.getElementById("hero-title")
-        var heroPicture = document.getElementById("hero-picture")
-
-        heroTitle.innerHTML = carouselData.data[currentCarousel].name
-        heroTitle.style.letterSpacing = "30px"
-        heroPicture.src = carouselData.data[currentCarousel].image
-    }
-
-    function carouselNext() {
-        if (currentCarousel == 1) { currentCarousel = 0 } else { currentCarousel++ }
-        setAttributeState()
-    }
-
-    function carouselPrev() {
-        if (currentCarousel == 0) { currentCarousel = 1 } else { currentCarousel-- }
-        setAttributeState()
-    }
-
-</script>
+<script src="scripts/home.js"></script>
 
 </html>
