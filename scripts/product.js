@@ -52,6 +52,7 @@ function getProductDetail(id) {
     return phones.data.find((item) => item.code === id);
 }
 
+
 function setBackgroundOpacity(elementId, hexColor, opacity) {
     if (hexColor.startsWith("#")) hexColor = hexColor.slice(1);
 

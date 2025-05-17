@@ -139,129 +139,17 @@ hr {
 }
 
 /* =================================================== */
-/* Promos Section ============================================= */
+/* About Section ============================================= */
 /* =================================================== */
 
-.promos {
+.about {
     margin-top: 12vh;
-    padding: 4vh;
+    padding-left: 4vh;
+    padding-right: 4vh;
 }
 
-.content-promos {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    gap: 18px;
-}
-
-.header-cpr {
-    min-height: 30vh;
-    display: flex;
-    flex-direction: row;
-    border-radius: 12px;
-    text-align: center;
-
-    position: relative;
-    overflow: hidden;
-    box-shadow: 8px 8px 12px rgba(0, 0, 0, 0.253);
-}
-
-.text-hcpr {
-    position: absolute;
-    width: 100%;
-    top: 40%;
-}
-
-.text-hcpr h1 {
-    margin-top: 0;
-    margin-bottom: 0;
-    font-size: 42px;
-}
-
-.text-hcpr h4 {
-    margin-top: 0;
-    margin-bottom: 0;
-    font-weight: 400;
-    line-height: 0.8;
-}
-
-.img-hcpr {
-    position: absolute;
-    width: auto;
-    height: 302px;
-    transition: .8s;
-}
-
-.header-cpr:hover .img-hcpr {
-    height: 332px;
-}
-
-.ihcpr-1 {
-    right: -92;
-    top: -92;
-    rotate: -130deg;
-}
-
-.ihcpr-2 {
-    left: -100;
-    bottom: -100;
-    rotate: 50deg;
-}
-
-@media (width <=833px) {
-    .img-hcpr {
-        height: 232px;
-    }
-}
-
-@media (width <=433px) {
-    .img-hcpr {
-        height: 202px;
-    }
-}
-
-/* Discounted Products */
-
-
-.footer-cpr {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-    box-sizing: border-box;
-}
-
-
-.item-cpr {
-    flex: 1 1 calc(50% - 12px);
-    box-shadow: 8px 8px 12px rgba(0, 0, 0, 0.253);
-    border-radius: 12px;
-    box-sizing: border-box;
-    height: 32vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 64px;
-    min-width: 300px;
-
-}
-
-@media (max-width: 768px) {
-    .item-cpr {
-        flex: 1 1 100%;
-    }
-}
-
-
-.item-cpr h1 {
-    margin-top: 0;
-    margin-bottom: 0;
-}
-
-.item-cpr h4 {
-    margin-top: 0;
-    margin-bottom: 0;
-    font-weight: 400;
+.about p {
+    font-size: 48px;
 }
 
 /* =================================================== */
