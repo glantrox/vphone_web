@@ -2,7 +2,9 @@ export const phones = {
     data: [
         {
             name: "STRAUSS ONE",
+            subtitle: "Kamera Canggih",
             image: "assets/images/hand_strauss_one.svg",
+            image2: "assets/images/strauss_one.svg",
             price: "Rp 1.699.000",
             description: [
                 "Kamera Mode Pro untuk hasil foto yang lebih tajam",
@@ -14,7 +16,9 @@ export const phones = {
         },
         {
             name: "STRAUSS 2",
+            subtitle: "Performa Terkencang",
             image: "assets/images/hand_strauss_2.svg",
+            image2: "assets/images/strauss_2.svg",
             price: "Rp 2.474.250",
             description: [
                 "Layar AMOLED 90Hz dengan visual mulus dan tajam",
@@ -26,7 +30,9 @@ export const phones = {
         },
         {
             name: "STRAUSS TRI",
+            subtitle: "Artificial Intelligence",
             image: "assets/images/hand_strauss_one.svg",
+            image2: "assets/images/strauss_tri.svg",
             price: "Rp 5.524.150",
             description: [
                 "AI Pintar untuk kamera, performa, dan efisiensi baterai",

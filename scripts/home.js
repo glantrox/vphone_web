@@ -9,11 +9,23 @@ var currentCarousel = 0;
 
 // Initial State
 document.addEventListener("DOMContentLoaded", () => {
-    setAttributeState()
 
+    // Display Static Data
+    setCarouselState()
+    setProductsState()
+
+    // Toggle Sticky Header ( Navbar )
     window.addEventListener(`scroll`, function () {
         var header = document.querySelector(".header")
         header.classList.toggle('sticky', window.scrollY > 0);
+    })
+
+    // Toggle Hamburger
+    var hamburger = document.querySelector(".hamburger")
+    hamburger.addEventListener(`click`, () => {
+        var navbar = document.querySelector(".navbar")
+        navbar.classList.toggle("active")
+        hamburger.classList.toggle("active")
     })
 
 })
@@ -27,10 +39,27 @@ buttonPrev.addEventListener("click", (event) => {
     carouselPrev()
 })
 
-function setAttributeState() {
+function setProductsState() {
+    var products = document.getElementById("cp")
+    var sizeOfProducts = length
+
+    for (let index = 0; index < sizeOfProducts; index++) {
+        const element = phones.data[index]
+        const contentProducts = document.createElement(`cp-wrapper`)
+        contentProducts.innerHTML = `
+            <div class="item-cp">
+                <img src="${element.image2}" alt="">
+                <h1 id="title-products">${element.name}</h1>
+                <h4 id="subtitle-products">${element.subtitle}</h4>
+            </div>
+        `
+        products.appendChild(contentProducts)
+    }
+}
+
+function setCarouselState() {
     var heroTitle = document.getElementById("hero-title")
     var heroPicture = document.getElementById("hero-picture")
-
 
     heroTitle.style.letterSpacing = "1px"
     heroPicture.style.opacity = "0";
@@ -49,11 +78,11 @@ function setAttributeState() {
 function carouselNext() {
     if (currentCarousel == length) { currentCarousel = 0 } else { currentCarousel++ }
 
-    setAttributeState()
+    setCarouselState()
 }
 
 function carouselPrev() {
     if (currentCarousel == 0) { currentCarousel = 1 } else { currentCarousel-- }
 
-    setAttributeState()
+    setCarouselState()
 }
