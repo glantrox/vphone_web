@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/about_us.css">
-    <title>vPhone | About Us</title>
+    <link rel="stylesheet" href="styles/register.css">
+    <title>vPhone | Register</title>
 </head>
 
 <body>
@@ -27,18 +27,41 @@
         </ul>
     </div>
 
-    <!-- About Section -->
-    <section class="about">
-        <h4>ABOUT US</h4>
-        <p id="about-text"></p>
+    <!-- Registration Section -->
+    <section class="register">
+        <div class="register-container">
+            <h1>Create Your Account</h1>
+            <form id="registerForm" novalidate>
+                <div class="form-group">
+                    <label for="fullname">Full Name</label>
+                    <input type="text" id="fullname" required>
+                    <span class="error-message" id="nameError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" required>
+                    <span class="error-message" id="emailError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" required>
+                    <span class="error-message" id="passwordError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="confirmPassword">Confirm Password</label>
+                    <input type="password" id="confirmPassword" required>
+                    <span class="error-message" id="confirmPasswordError"></span>
+                </div>
+
+                <button type="submit">Register</button>
+            </form>
+        </div>
     </section>
 
-    <hr>
-    <!-- Pre Footer -->
-    <div class="prefooter unselectable">
-        <h1>Diciptakan untuk dicintai.</h1>
-        <h4>Semua STRAUSS = kencang, tahan lama, pintar, desain <br> indah, siap untuk masa depan.</h4>
-    </div>
+
     <hr>
     <!-- Footer -->
     <div class="footer ">
@@ -78,6 +101,6 @@
     </div>
 
 </body>
-<script src="scripts/about_us.js" type="module"></script>
+<script src="scripts/register.js" type="module"></script>
 
 </html>
