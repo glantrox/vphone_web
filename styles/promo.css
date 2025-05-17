@@ -1,0 +1,304 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: "Inter", sans-serif;
+    background-color: white;
+    margin: 0px;
+    scroll-behavior: smooth;
+}
+
+hr {
+    margin: 52px;
+    opacity: 0.3;
+}
+
+/* =================================================== */
+/* Header ================================================== */
+/* =================================================== */
+
+
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    position: fixed;
+    background-color: #D9D9D9;
+    transition: .9s;
+}
+
+.header.sticky {
+    display: flex;
+    transition: all .5s ease-out;
+    align-items: center;
+    background-color: white;
+    box-shadow: 2px 8px 5px rgba(0, 0, 0, 0.199);
+}
+
+.navbar-title {
+    text-decoration: none;
+    transition: .3s;
+    cursor: pointer;
+    color: black;
+    font-size: 22px;
+    font-weight: 700;
+    margin: 42px;
+}
+
+.navbar {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: end;
+    margin: 42px;
+
+}
+
+
+.navbar a {
+    text-decoration: none;
+    transition: .3s;
+    cursor: pointer;
+    color: black;
+    margin-left: 122px;
+}
+
+.navbar a:hover {
+    color: cadetblue;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 4px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.content-hg {
+    height: 3px;
+    width: 25px;
+    background-color: black;
+}
+
+@media (width <=899px) {
+    .hamburger {
+        display: flex;
+    }
+
+    .navbar a {
+        display: none;
+    }
+
+    .navbar.active a {
+        display: flex;
+        margin-top: 5px;
+    }
+
+    .navbar.active {
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        gap: 32px;
+    }
+
+    .navbar.active .header.sticky {
+        background-color: white;
+    }
+
+    .hamburger.active .content-hg {
+        transition: .3s;
+        transition-timing-function: ease-out;
+
+    }
+
+    .hamburger .content-hg {
+        transition: .3s;
+        transition-timing-function: ease-in;
+
+    }
+
+    /* Hamburger Animation */
+    .hamburger.active .content-hg:nth-child(1) {
+        opacity: 0;
+    }
+
+    .hamburger.active .content-hg:nth-child(2) {
+        rotate: 45deg;
+        position: absolute;
+    }
+
+    .hamburger.active .content-hg:nth-child(3) {
+        rotate: -45deg;
+        position: absolute;
+    }
+
+}
+
+/* =================================================== */
+/* Promos Section ============================================= */
+/* =================================================== */
+
+.promos {
+    margin-top: 12vh;
+    padding: 4vh;
+}
+
+.content-promos {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.header-cpr {
+    min-height: 30vh;
+    display: flex;
+    flex-direction: row;
+    border-radius: 12px;
+    text-align: center;
+
+    position: relative;
+    overflow: hidden;
+    box-shadow: 8px 8px 12px rgba(0, 0, 0, 0.253);
+}
+
+.text-hcpr {
+    position: absolute;
+    width: 100%;
+    top: 40%;
+}
+
+.text-hcpr h1 {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 42px;
+}
+
+.text-hcpr h4 {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-weight: 400;
+    line-height: 0.8;
+}
+
+.img-hcpr {
+    position: absolute;
+    width: auto;
+    height: 302px;
+    transition: .8s;
+}
+
+.header-cpr:hover .img-hcpr {
+    height: 332px;
+}
+
+.ihcpr-1 {
+    right: -92;
+    top: -92;
+    rotate: -130deg;
+}
+
+.ihcpr-2 {
+    left: -100;
+    bottom: -100;
+    rotate: 50deg;
+}
+
+@media (width <=833px) {
+    .img-hcpr {
+        height: 232px;
+    }
+}
+
+@media (width <=433px) {
+    .img-hcpr {
+        height: 202px;
+    }
+}
+
+
+
+/* =================================================== */
+/* Footer & Prefooter ============================================= */
+/* =================================================== */
+
+.prefooter {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 32px;
+}
+
+.prefooter h4 {
+    margin-bottom: 0;
+    margin-top: 4px;
+    font-weight: 400;
+    font-size: 16px;
+    color: #888888;
+}
+
+.prefooter h1 {
+    margin-bottom: 0;
+    margin-top: 0;
+    font-size: 42px;
+}
+
+/* Footer */
+
+.footer {
+    display: flex;
+    flex-wrap: wrap-reverse;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: top;
+    padding: 82px;
+}
+
+.footer h1 {
+    margin-bottom: 0;
+    margin-top: 0;
+    font-size: 20px;
+}
+
+.footer p {
+    margin-bottom: 0;
+    margin-top: 0;
+    font-size: 16px;
+    color: #888888;
+    font-weight: 500;
+}
+
+.content-fr-1 {
+    display: flex;
+    flex-direction: row;
+    gap: 82px;
+}
+
+#text-copyright {
+    margin-top: 72px;
+}
+
+.footer-left {
+    text-align: end;
+    max-width: 24vh;
+}
+
+@media (width <=880px) {
+    .footer-left {
+        text-align: center;
+        max-width: 24vh;
+    }
+
+    .footer {
+        justify-content: center;
+    }
+
+    .footer-right {
+        margin-top: 82px;
+    }
+}

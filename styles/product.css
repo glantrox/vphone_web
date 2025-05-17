@@ -7,7 +7,6 @@ body {
     background-color: white;
     margin: 0px;
     scroll-behavior: smooth;
-
 }
 
 hr {
@@ -26,6 +25,7 @@ hr {
     justify-content: space-between;
     width: 100%;
     position: fixed;
+    background-color: #D9D9D9;
     transition: .9s;
 }
 
@@ -139,291 +139,115 @@ hr {
 }
 
 /* =================================================== */
-/* Hero Section ============================================== */
+/* Details Section ============================================= */
 /* =================================================== */
 
-.hero {
+.pic-title {
     min-height: 100vh;
-    min-width: 100%;
-    background-color: #D9D9D9;
     display: flex;
     flex-direction: column;
-    justify-content: end;
+    justify-content: center;
     align-items: center;
 }
 
-#hero-title {
-    opacity: 0;
-    font-weight: 700;
-    transition: 1s;
-}
-
-.hero-carousel {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    transition: .3s;
-}
-
-.unselectable {
-    -webkit-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-}
-
-#hero-picture {
+.pic-title img {
     width: auto;
-    height: 681px;
-    opacity: 0;
-    transition: 1.2s;
+    height: 500px;
 }
 
-.btnCarousel {
-    cursor: pointer;
+.pic-title h1 {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 42px;
 }
 
-.btnCarousel:hover {
-    font-weight: 900;
-    color: cadetblue;
+.pic-title h4 {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-weight: 400;
+    font-size: 22px;
+    color: #888888;
 }
 
-@media (width <=899px) {
-    #hero-picture {
-        height: 481px;
-    }
+/* =================================================== */
+/* Spec Section ============================================= */
+/* =================================================== */
 
-    #hero-title {
+.specifications-details {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.sd {
+    display: flex;
+
+    min-height: 18vh;
+    text-align: start;
+    color: rgb(0, 0, 0);
+}
+
+.spec {
+    justify-content: space-evenly;
+    font-size: 25px;
+
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 8vh;
+    gap: 12px;
+}
+
+@media (width <=1600px) {
+    .spec {
+        display: flex;
+        flex-direction: column;
         text-align: center;
     }
-
-    .hero {
-        min-height: 80vh;
-    }
-
 }
 
-/* =================================================== */
-/* Intro Section ============================================= */
-/* =================================================== */
+/* Buy Button */
 
-.intro {
-    min-height: 100vh;
-    min-width: 100%;
-    background-color: white;
-    display: flex;
-    flex-direction: column;
-}
-
-.header-intro {
+.price-buy {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    color: black;
-    align-items: start;
-    margin: 88px;
-}
-
-.text-intro-details {
-    text-align: end;
-    max-width: 765px;
-}
-
-.text-intro-details span {
-    font-weight: 700;
-}
-
-.text-intro-title {
-    text-align: start;
-    max-width: 372px;
-    font-size: 40px;
-    line-height: 0.9;
-}
-
-@media (width <=1390px) {
-    .header-intro {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-
-    }
-
-    .text-intro-details {
-        text-align: center;
-    }
-
-    .text-intro-title {
-        text-align: center;
-    }
-}
-
-
-.body-intro {
-    margin: 88px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    flex-wrap: wrap;
-    min-height: 60vh;
-    gap: 12px;
-}
-
-.bi-right {
-
-    width: 79%;
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-}
-
-.br-item {
-    background-color: #D9D9D9;
-    border-radius: 12px;
-    display: flex;
-    flex-direction: row;
-    justify-content: start;
     align-items: center;
+    padding-left: 10vh;
+    padding-right: 10vh;
 }
 
-.bi-right .br-item:nth-child(1) {
-    height: 20%;
-}
-
-.bi-right .br-item:nth-child(2) {
-    height: 80%;
-}
-
-.br-item-text {
-    margin: 22px;
-
-}
-
-.br-item-text h4 {
-    font-weight: 400;
-    font-size: large;
+.pb-left h1 {
+    font-size: 32px;
     margin-top: 0;
     margin-bottom: 0;
+    font-size: 54px;
 }
 
-.br-item-text h1 {
-    font-weight: bold;
-    font-size: 28px;
-    margin-top: 0;
-    margin-bottom: 0;
-}
-
-.br-item:nth-child(2) {
-
-    background-color: #D9D9D9;
-    align-items: end;
-
-}
-
-.bi-left {
-    width: 20%;
-    background-color: #D9D9D9;
-    border-radius: 12px;
-}
-
-@media (width <=1390px) {
-    .bi-right .br-item:nth-child(1) {
-        height: 50%;
-    }
-
-    .bi-left {
-        width: 100%;
-    }
-
-    .bi-right {
-        width: 100%;
-    }
-}
-
-/* =================================================== */
-/* Products Section ============================================= */
-/* =================================================== */
-
-#products {
-    position: relative;
-    margin-top: 20vh;
-}
-
-.title-cp {
-    position: absolute;
-    left: 20%;
-    right: 20%;
-    top: -5%;
-    line-height: 0.8;
-    margin-top: 0;
-    margin-bottom: 0;
-    font-style: italic;
-    text-align: center;
-    font-size: 12vh;
-}
-
-@media (width <=1191px) {
-    .title-cp {
-        font-size: 132px;
-    }
-}
-
-@media (width <=1091px) {
-    .title-cp {
-        font-size: 90px;
-        left: 10%;
-        right: 10%;
-        top: -2%;
-    }
-}
-
-
-.content-products {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    min-height: 50vh;
-    background-color: #D9D9D9;
-    gap: 16px;
-    padding: 200px;
-    flex-wrap: wrap;
-}
-
-
-.item-cp {
-    min-height: 402;
-    min-width: 320;
-    background-color: white;
-    border-radius: 12px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.item-cp h1 {
-    margin-top: 0;
-    margin-bottom: 0;
-}
-
-.item-cp h4 {
+.pb-left h4 {
+    font-size: 32px;
     margin-top: 0;
     margin-bottom: 0;
     font-weight: 400;
+    font-size: 16px;
+}
+
+.pb-right h1 {
+    font-size: 32px;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 54px;
+    font-weight: 300;
+    cursor: pointer;
+}
+
+/* Strong Description */
+#s-desc {
+    margin-top: 4vh;
+    margin-left: 10vh;
+    margin-right: 10vh;
+    font-size: 18px;
     color: #888888;
-}
-
-.products-descriptions {
-    font-weight: 400;
-    margin: 62px;
-    line-height: 1.5;
-    color: #888888;
-}
-
-@media (width <=604px) {
-    .products-descriptions {
-        font-size: 13px;
-    }
 }
 
 /* =================================================== */
